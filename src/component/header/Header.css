@@ -1,0 +1,55 @@
+.header{
+    
+    margin: 0 2.5rem;
+    padding: .5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.headerLeft,.headerRight{
+    display: flex;
+    align-items: center;
+}
+.header__icon{
+    
+    width: 120px;
+    cursor: pointer;
+}
+a> span{
+    margin: 0 30px;
+    font-size: 1.3rem;
+    cursor:pointer;
+    color: white;
+}
+span:hover{
+    color: gold;
+ 
+}
+.navbar {
+    display: flex;
+    margin-left: 200px;
+    justify-content: space-evenly;
+    align-items: left center;
+    background-color:transparent;
+    color: white;
+    padding: 30px;
+  }
+  
+  
+  
+  .nav-links, .user-links {
+    display: flex;
+  }
+  
+  .nav-links a, .user-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .user-links a {
+    display: flex;
+    align-items: center;
+  }
