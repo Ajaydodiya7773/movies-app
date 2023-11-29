@@ -14,13 +14,15 @@ import logo from '../Logo/logo.png';
       <img src={logo} alt="logo" width="200px" height="200px"/>
         
       <b>
+      <Link to="/"style={{textDecoration: "none"}}><span><FontAwesomeIcon/>Home</span></Link>
+     
       <Link to="/movies/popular"style={{textDecoration: "none"}}><span><FontAwesomeIcon/>Popular</span></Link>
       <Link to="/movies/top_rated"style={{textDecoration: "none"}}><span><FontAwesomeIcon  />TopRated</span></Link>
       <Link to="/movies/upcoming"style={{textDecoration: "none"}}><span><FontAwesomeIcon  />Upcoming</span></Link>
       </b>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit" style="2>Search</button>
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     <nav className="navbar">
       <div className="user-links">
