@@ -5,17 +5,31 @@ import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import MovieList from '../../component/header/MovieList/MovieList';
 
-
 const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(
-      'https://api.themoviedb.org/3/movie/popular?api_key=b98bd8181f95055c9fa12f263ee6006f'
-    )
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=b98bd8181f95055c9fa12f263ee6006f&language=en-US&page=1&region=India')
       .then((res) => res.json())
-      .then((data) => setPopularMovies(data.results));
+      .then((data) => {
+        setPopularMovies(data.results);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
 
   return (
     <>
@@ -35,8 +49,7 @@ const Home = () => {
             >
               <div className="posterImage">
                 <img
-                  src={`https://image.tmdb.org/t/p/original${movie &&
-                    movie.backdrop_path}`}
+                  src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`}
                   alt={movie.original_title}
                 />
               </div>
@@ -58,11 +71,9 @@ const Home = () => {
             </Link>
           ))}
         </Carousel>
-        <MovieList/>
+        <MovieList />
       </div>
-      
     </>
-    
   );
 };
 

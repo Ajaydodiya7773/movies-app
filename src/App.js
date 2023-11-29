@@ -6,7 +6,8 @@ import Home from './pages/home/Home';
 import MovieList from './component/header/MovieList/MovieList';
 import Movie from './pages/home/MovieDetails/Movie';
 import Footer from './component/header/MovieList/Footer';
-import Login from './component/header/LoginPage/Login';
+
+
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
         <Route path="movie/:Name" element={<Movie/>}></Route>
         <Route path="movies/:type" element={<MovieList/>}></Route>
         <Route path="/*" element={<h1>Error Not Found</h1>}></Route>
-        <Route path="Login/SingnUp/:Login" element={<Login/>}></Route>
+          
+  
+       
   </Routes>
       
      </Router>

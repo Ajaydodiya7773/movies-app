@@ -10,9 +10,9 @@
     display: flex;
     align-items: center;
 }
+
 .header__icon{
-    
-    width: 120px;
+  
     cursor: pointer;
 }
 a> span{
@@ -27,12 +27,15 @@ span:hover{
 }
 .navbar {
     display: flex;
-    margin-left: 200px;
+   
+    margin-left: 180px;
+    margin-right: 190px;
     justify-content: space-evenly;
     align-items: left center;
     background-color:transparent;
+    background-size: auto;
     color: white;
-    padding: 30px;
+    padding: 50px;
   }
   
   
@@ -53,3 +56,30 @@ span:hover{
     display: flex;
     align-items: center;
   }
+ a:hover{
+  color: gold;
+ }
+ .custom-dropdown {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the options */
+.custom-dropdown option {
+  background-color:whitesmoke;
+  color: #333;
+  padding: 8px;
+  border:rosybrown;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style on hover/focus */
+.custom-dropdown:hover,
+.custom-dropdown:focus {
+  background-color: #dddddd;
+}
